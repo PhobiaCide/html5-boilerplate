@@ -1,0 +1,370 @@
+/* ---------- Base Reset & Typography ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ---------- Navigation & Hero ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar ul li a:hover {
+  color: #0078d4;
+}
+
+/* Hero Section */
+.hero, .footer {
+  background: linear-gradient(rgba(0, 120, 212, 0.6), rgba(0, 120, 212, 0.6)), 
+    url('hero-placeholder.jpg') center/cover no-repeat !important;
+  /* Replace with a relevant hero image */
+  color: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+.hero-content {
+  margin-top: 2rem;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.subheading {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background-color: #0078d4;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #005bb5;
+}
+
+/* ---------- Sections ---------- */
+section {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-radius: 6px;
+}
+
+/* About Section */
+.about-section .about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.about-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+.about-grid h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Services Section */
+.services-section .section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background-color: #f0f4f8;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.service-card h3 {
+  margin-bottom: 1rem;
+}
+.service-card p {
+  color: #555;
+}
+
+/* Testimonials Section */
+.testimonials-section .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial {
+  background-color: #f0f4f8;
+  border-radius: 6px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.testimonial .quote {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.testimonial .author {
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Team Section */
+.team-section .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team-member h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.team-member p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* FAQ Section */
+.faqs {
+  margin-top: 1.5rem;
+}
+.faq-item {
+  margin-bottom: 1rem;
+}
+.faq-item h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.faq-item p {
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+.contact-section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-radius: 0;
+}
+/* 
+ * This file overrides or augments Halmoon + Topcoat 
+ * to create a modern, eye-catching design.
+ */
+
+/* =============== GLOBAL RESETS =============== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+ * Because Halmoon provides utility classes, we can 
+ * add custom classes or IDs for specific enhancements. 
+ */
+
+/* =============== BODY & GENERAL STYLES =============== */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; /* or your chosen font */
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =============== STICKY HEADER =============== */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /* ensure it stays on top */
+  background-color: transparent; /* Start transparent */
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Add background when scrolled */
+.sticky-header.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Extra spacing / smaller height when scrolled (optional) */
+.sticky-header.scrolled .hm-nav-list li a {
+  padding: 0.75rem;
+}
+
+/* 
+ * Ensure the top content isn't hidden behind the sticky header.
+ * You can tweak this offset in your sections if needed. 
+ */
+#hero {
+  padding-top: 5rem;
+}
+
+/* =============== HERO SECTION =============== */
+.hero {
+  min-height: 80vh; /* Make it tall and impactful */
+  background: linear-gradient(
+              rgba(0, 0, 0, 0.4), 
+              rgba(0, 0, 0, 0.4)
+            ), 
+            url('hero-placeholder.jpg') center/cover no-repeat;
+  /* Replace with a relevant hero image */
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Eye-catching hero title */
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Subtle subtitle text */
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+.hero-cta {
+  font-weight: bold;
+}
+
+/* =============== SECTION FADE-IN (ON SCROLL) =============== */
+.section-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 
+ * We'll reveal sections with a small snippet of intersection observer 
+ * in JavaScript (optional). But you can also do it by default. 
+ * For simplicity, you can remove the need for JS by applying 
+ * .section-show in your HTML if you want them always visible. 
+ */
+.section-fade.section-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============== SERVICE CARDS HOVER EFFECT =============== */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* =============== TESTIMONIAL STYLES =============== */
+.testimonial-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: scale(1.02);
+}
+
+/* =============== FAQ COLLAPSE =============== */
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+.faq-toggle {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hidden content by default */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  opacity: 0;
+}
+.faq-content.show-faq {
+  max-height: 200px; /* or something bigger if needed */
+  opacity: 1;
+}
+
+/* =============== FOOTER =============== */
+.footer {
+  background-color: #fff;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eee;
+}
